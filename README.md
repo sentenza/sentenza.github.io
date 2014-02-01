@@ -9,6 +9,8 @@ dynamic components such as templates, partials, liquid code, markdown, etc. Jeky
 
 This website is created with [Jekyll](https://github.com/mojombo/jekyll). [Other Jekyll websites](https://github.com/mojombo/jekyll/wiki/Sites).
 
+For original project's usage and documentation please see: <http://jekyllbootstrap.com>  
+
 ### What does Jekyll Do?
 
 Jekyll is a ruby gem you install on your local system.
@@ -132,7 +134,9 @@ Both posts and pages can have meta-data assigned on a per-page basis such as tit
 ### Working With Posts
 
 **Creating a Post**   
-Posts are created by properly formatting a file and placing it the `_posts` folder.
+Posts are created by properly formatting a file and placing it the `_posts` folder. This operation is automated with the help of `rake`:
+
+    rake post title="A Title" [date="2012-02-09"] [tags=[tag1, tag2]]
 
 **Formatting**  
 A post must have a valid filename in the form `YEAR-MONTH-DATE-title.MARKUP` and be placed in the `_posts` directory. 
@@ -383,17 +387,7 @@ Remember, in Jekyll you are an end-user. Your API has only two components:
 All the data objects available to you in the templates via Liquid are outlined in the **API Section** of Jekyll-Bootstrap.
 You can also read the original documentation here: <https://github.com/mojombo/jekyll/wiki/Template-Data>
 
-## Usage
 
-## 1. Create a post
-
-    rake post title="A Title" [date="2012-02-09"] [tags=[tag1, tag2]]
-
-
-## 2. Enjoy !
-- After giving 10 mins to GitHub of course.  
-
-For original project's usage and documentation please see: <http://jekyllbootstrap.com>  
 
 ## License
 
