@@ -1,4 +1,4 @@
-# Alfredo Torre devlog 
+# Alfredo Torre's devlog 
 
 This repo is the default weblog hosted via Github Pages and Jekyll.
 
@@ -7,9 +7,7 @@ This repo is the default weblog hosted via Github Pages and Jekyll.
 Jekyll is a parsing engine bundled as a ruby gem used to build static websites from
 dynamic components such as templates, partials, liquid code, markdown, etc. Jekyll is known as "a simple, blog aware, static site generator".
 
-This website is created with [Jekyll](https://github.com/mojombo/jekyll). [Other Jekyll websites](https://github.com/mojombo/jekyll/wiki/Sites).
-
-For original project's usage and documentation please see: <http://jekyllbootstrap.com>  
+This website is created with a fork of [jekyll-bootstrap (v0.3.0)](https://github.com/dbtek/jekyll-bootstrap-3). Check out [Jekyll](https://github.com/mojombo/jekyll) and the [websites](https://github.com/mojombo/jekyll/wiki/Sites) that use this parsing engine. Moreover, for original project's usage and documentation please see: <http://jekyllbootstrap.com>. 
 
 ### What does Jekyll Do?
 
