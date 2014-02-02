@@ -7,6 +7,7 @@ tags: [Python, Scripting]
 ---
 {% include JB/setup %}
 
+
 ### Resources
 
 - [Python for Bash scripters: A well-kept secret](http://magazine.redhat.com/2008/02/07/python-for-bash-scripters-a-well-kept-secret/)
