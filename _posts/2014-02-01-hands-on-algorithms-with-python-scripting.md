@@ -14,6 +14,13 @@ Two days ago I looked for a good project to partecipate with the purpose of enha
 I suddendly realized that the right way was Python. So here the real story starts. I resumed this [doc page](http://docs.python.org/2/library/optparse.html) but the highlighted message in red on the top of that page redirects me on `argparse`, rather than `optparse`. My problem on that precise moment? I use Ubuntu 10.10 as my operating system and I have Python 2.6: I should have to [install the new version of the interpreter](https://gist.github.com/sentenza/8769261)... There was also an alternative by using a `virtualenv`
 
      virtualenv --python=/usr/bin/python2.7 algopy
+     
+
+
+[Why virtualenv?](http://pypi.python.org/pypi/virtualenv)
+
+>The basic problem being addressed is one of dependencies and versions, and indirectly permissions. Imagine you have an application that needs version 1 of LibFoo, but another application requires version 2. How can you use both these applications? If you install everything into /usr/lib/python2.4/site-packages (or whatever your platform's standard location is), it's easy to end up in a situation where you unintentionally upgrade an application that shouldn't be upgraded.
+
 
 Eriol, from the Catania GLUG, pointed me in the right direction suggesting to include a setup.py with the necessary dependencies and also to give a message to the user with a try-except on the import with an error message linking to <https://pypi.python.org/pypi/argparse>.
 
