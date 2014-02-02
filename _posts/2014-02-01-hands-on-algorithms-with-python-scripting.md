@@ -22,13 +22,13 @@ I suddendly realized that the right way was Python. So here the real story start
 >The basic problem being addressed is one of dependencies and versions, and indirectly permissions. Imagine you have an application that needs version 1 of LibFoo, but another application requires version 2. How can you use both these applications? If you install everything into /usr/lib/python2.4/site-packages (or whatever your platform's standard location is), it's easy to end up in a situation where you unintentionally upgrade an application that shouldn't be upgraded.
 
 
-Eriol, from the Catania GLUG, pointed me in the right direction suggesting to include a setup.py with the necessary dependencies and also to give a message to the user with a try-except on the import with an error message linking to <https://pypi.python.org/pypi/argparse>.
+[Eriol](http://mornie.org), from the Catania GLUG, pointed me in the right direction suggesting to include a setup.py with the necessary dependencies and also to give a message to the user with a try-except on the import with an error message linking to <https://pypi.python.org/pypi/argparse>.
 
     try:
         import argparse
     except ImportError, e:
         sys.stderr.write(e)
-        print "Try to install https://pypi.python.org/pypi/argparse"
+        sys.stderr.write("You must install argparse: https://pypi.python.org/pypi/argparse")
 
 ### Resources
 
