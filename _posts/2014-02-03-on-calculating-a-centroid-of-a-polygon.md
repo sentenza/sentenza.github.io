@@ -78,5 +78,7 @@ if (!p.Contains(c)){
 }
 return c;}
 ```
+Also consider the possibility of combining the previos code with this Google Maps API v3 extension:
+<https://github.com/tparkin/Google-Maps-Point-in-Polygon>.
 
 [Another possible solution](http://www.cs.mcgill.ca/~cs507/projects/1998/jacob/solutions.html) was also pointed out to me by [Astrac](https://github.com/Astrac). I hope this post could possibly help someone for managing maps with vector layers polygons.
