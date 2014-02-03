@@ -79,4 +79,4 @@ if (!p.Contains(c)){
 return c;}
 ```
 
-Another possible solution was also pointed out to me by [Astrac](https://github.com/Astrac). I hope this post could possibly help someone for managing maps with vector layers polygons.
+[Another possible solution](http://www.cs.mcgill.ca/~cs507/projects/1998/jacob/solutions.html) was also pointed out to me by [Astrac](https://github.com/Astrac). I hope this post could possibly help someone for managing maps with vector layers polygons.
