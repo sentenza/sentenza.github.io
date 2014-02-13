@@ -24,11 +24,13 @@ I suddendly realized that the right way was Python. So here the real story start
 
 [Eriol](http://mornie.org), from the Catania GLUG, pointed me in the right direction suggesting to include a setup.py with the necessary dependencies and also to give a message to the user with a try-except on the import with an error message linking to <https://pypi.python.org/pypi/argparse>.
 
-    try:
-        import argparse
-    except ImportError, e:
-        sys.stderr.write(e)
-        sys.stderr.write("You must install argparse: https://pypi.python.org/pypi/argparse")
+``` python 
+try:
+     import argparse
+except ImportError, e:
+     sys.stderr.write(e)
+     sys.stderr.write("You must install argparse: https://pypi.python.org/pypi/argparse")
+```
 
 ### Resources
 
