@@ -385,7 +385,20 @@ Remember, in Jekyll you are an end-user. Your API has only two components:
 All the data objects available to you in the templates via Liquid are outlined in the **API Section** of Jekyll-Bootstrap.
 You can also read the original documentation here: <https://github.com/mojombo/jekyll/wiki/Template-Data>
 
+## Working with drafts
 
+Simply put your post to your `_drafts` folder in your site's root and create your drafts:
+
+```
+|-- _drafts/
+|   |-- a-draft-post.md
+
+```
+
+To preview your site with drafts, simply run `jekyll serve` or jekyll 
+build with the `--drafts` switch. Each will be assigned the value 
+modification time of the draft file for its date, 
+and thus you will see currently edited drafts as the latest posts.
 
 ## License
 
