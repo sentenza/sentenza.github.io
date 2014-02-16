@@ -2,7 +2,7 @@
 layout: post
 title: "Hands on algorithms with Python scripting"
 description: "Writing a toolset of useful scripts for the Linux shell"
-category: Python
+category: Programming
 tags: [Python, Scripting]
 ---
 {% include JB/setup %}

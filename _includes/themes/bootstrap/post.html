@@ -14,7 +14,7 @@
     {% unless page.categories == empty %}
     <br>
     <h4>Categories</h4>
-      <ul class="tag_box inline">
+      <ul class="nav nav-pills">
 	      <!-- <li><i class="icon-folder-open"></i></li> -->
         {% assign categories_list = page.categories %}
         {% include JB/categories_list %}
@@ -23,7 +23,7 @@
 
     {% unless page.tags == empty %}
     <h4>Tags</h4>
-      <ul class="tag_box inline">
+      <ul class="nav nav-pills">
 	      <!-- <li><i class="icon-tags"></i></li> -->
         {% assign tags_list = page.tags %}
         {% include JB/tags_list %}
