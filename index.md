@@ -1,7 +1,7 @@
 ---
 layout: index
 title: Alfredo Torre 
-tagline: aka sentenza/skydiamond
+tagline: aka sentenza
 ---
 {% include JB/setup %}
 
