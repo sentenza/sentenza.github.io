@@ -9,7 +9,7 @@ padding: 0.2em 0.9em;
 	font: normal normal normal 115%/normal 'Menlo', 'Monaco', 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace !important;
   line-height: 1.1em;
   overflow: auto;
-	font-size: 1.0em;
+	font-size: 0.8em;
 	border: 1px solid #CCC;
 	
 	-moz-border-radius:7px;
@@ -28,7 +28,7 @@ color: #C5CBD0;
 /*color: white*/
 background-image: url(/images/opaque_20.png);
 font-family: Menlo, Consolas, "Courier New", Courier, "Liberation Mono", monospace;
-font-size: 1.1em;
+font-size: 0.85em;
 /*height: 0px;
 image-rendering: auto;
 left: auto;
@@ -53,10 +53,13 @@ color: #95be7d;
 
 code, pre {
 	font-family: "Consolas", "Courier New", "Courier", "FreeMono", monospace;
-	font-size:0.95em;
+	font-size:0.8em;
 	margin: 1em 0 1.5em 0;
 }
 
+pre code {
+    font-size: 0.8em !important;
+}
 
 .highlight pre code { 
 	color: #FFE; 
@@ -65,7 +68,7 @@ code, pre {
 .highlight span
 {
 font-family: "Consolas", "Courier New", "Courier", "FreeMono", monospace;
-font-size:1em;
+font-size: 0.8em;
 }
 
 .highlight .hll { background-color: #222222 }
