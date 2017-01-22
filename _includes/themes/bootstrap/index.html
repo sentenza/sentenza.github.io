@@ -4,38 +4,18 @@
 
 <div class="row">
   <!-- Column 1 -->
-  <div class="col-xs-12 col-md-8">
+  <div class="hidden-sm hidden-xs col-md-8">
       <div class="blog-entries">
 	      <h3><a href="archive.html" title="Blog"><span class="label label-danger"><i class="fa fa-rss"></i></span></a> 
 			      <a href="archive.html" title="Blog">Blog entries</a></h3>
-        <hr>
         {{ content }}
-	  <hr><small>
-          {% for post in site.posts limit:5 %}
-            <h4>
-              <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-              <small>{{ post.date | date_to_long_string }}</small>
-            </h4>
-	    <div class="row">
-	    {% if post.thumbnail %}
-              <div class="col-xs-2">
-                <img src="{{ post.thumbnail }}" height="75" width="75" class="thumbnail"/>
-              </div>
-	      <div class="col-xs-10">
-	      {% else %}
-                <div class="col-xs-12">
-              {% endif %}
-                {{ post.description }}
-              </div>
-            </div>
-          {% endfor %}
-        </small>
       </div>
     </div>
 
+
   <!-- Column 2 -->
-  <div class="col-xs-12 col-md-4">
-      <div class="well">
+  <div class="col-xs-12 col-sm-6 col-md-4">
+      <div class="well" style="padding-top: 0">
         <h1>Short bio</h2>
       <span class="col-xs-4 pull-right">
         <img src="https://avatars1.githubusercontent.com/u/2479647?s=140" height="150" width="150" class="img-thumbnail">
@@ -52,7 +32,7 @@
       		At the moment I am interested in contracts that involve the use of Symfony (v2+), Scala or Java.
       </div>
     </div> <!-- /.well -->
-    <div class="well">
+    <div class="well" style="padding-top: 0">
       <h3>More about me</h3>
       <p>
         <a class="icon-link" href="http://stackoverflow.com/cv/alfredo-torre" style="margin-right: 1em;"><i class="fa fa-stack-overflow fa-2x"></i></a>
@@ -62,5 +42,28 @@
       </p>
     </div> <!-- /.well -->
   </div> <!-- /.col -->
+  
+    <div class="col-sm-6 col-xs-12 hidden-md hidden-lg">
+        <small>
+        {% for post in site.posts limit:5 %}
+        <h4>
+            <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+            <small>{{ post.date | date_to_long_string }}</small>
+        </h4>
+    <div class="row">
+    {% if post.thumbnail %}
+            <div class="col-xs-2">
+            <img src="{{ post.thumbnail }}" height="75" width="75" class="thumbnail"/>
+            </div>
+        <div class="col-xs-10">
+        {% else %}
+            <div class="col-xs-12">
+            {% endif %}
+            {{ post.description }}
+            </div>
+        </div>
+        {% endfor %}
+    </small>
+    </div>
 </div><!-- /.row -->
 
