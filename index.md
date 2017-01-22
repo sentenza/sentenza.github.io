@@ -1,17 +1,17 @@
 ---
 layout: index
 title: Alfredo Torre 
-tagline: aka sentenza
+tagline: coding weblog
 ---
 {% include JB/setup %}
 
-
-<!-- This is not shown on the index template page! -->
-
-Here's a sample "posts list".
-
-<ul class="posts">
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
+{% for post in site.posts %}
+  <div class="panel panel-default">
+    <div class="panel-heading">
+    {{ post.date | date_to_string }} - <a href="{{ post.url }}">{{ post.title }}</a></div>
+    <div class="panel-body">
+      {{ post.excerpt }}
+      <a href="{{ post.url }}">See full post</a>
+    </div>
+  </div>
+{% endfor %}
