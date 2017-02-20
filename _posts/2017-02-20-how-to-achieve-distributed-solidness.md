@@ -31,6 +31,7 @@ Given that, we want to achieve three core features:
     * Guaranteed properties are maintained even when network failures prevent some machines from communicating with others
 
 The **CAP theorem** states that a system can satisfy at most two of these three features above.
+<!--more-->
 
 For a distributed system to be continously **available**, every request received by a non-failing node in the system __must__ result in a response, so every algorithm used by the service have to eventually terminate. Hence this fact would be observed in terms of uptime percentage and liveness property of the algorithm.
 
