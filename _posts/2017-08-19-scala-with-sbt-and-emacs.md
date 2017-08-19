@@ -69,7 +69,7 @@ where `:=` is a function defined in the `sbt` library. It is used to define a se
 
 @see [sbt documentation](http://www.scala-sbt.org/0.13/docs/Howto-Scala.html)
 
-`sbt.version` [specifies the target sbt version](http://www.scala-sbt.org/release/docs/Basic-Def.html#Specifying+the+sbt+version) that our build will use. If the required version is not available locally, the sbt launcher will download it for you. If this file is not present, the sbt launcher will choose an arbitrary version, **which is discouraged because it makes your build non-portable**.  To retrieve the information about the sbt you're running on you can use the following command:
+`sbt.version` [specifies the target sbt version](http://www.scala-sbt.org/release/docs/Basic-Def.html#Specifying+the+sbt+version) that our build will use. If the required version is not available locally, the sbt launcher will download it for you. If this file is not present, the sbt launcher will choose an arbitrary version, **which is discouraged because it makes your build non-portable**.  To retrieve the essential information about sbt (also see [this SO answer](https://stackoverflow.com/a/8462854/1977778)) you're running on you can use the following command:
 
 ```
 sbt about
