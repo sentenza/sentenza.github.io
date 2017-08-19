@@ -100,6 +100,7 @@ libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.1" % "test"
 ```bash
 $ sbt new scala/hello-world.g8
 ```
+@see [Getting started with Scala and sbt in the CLI](https://www.scala-lang.org/documentation/getting-started-sbt-track/getting-started-with-scala-and-sbt-in-the-command-line.html)
 
 ## Resources
 
