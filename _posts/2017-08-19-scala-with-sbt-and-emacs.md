@@ -11,8 +11,6 @@ Start programming and experimenting with a functional programming language like 
 to get your feet wet it's useful to have the very essential in a single place. I started writing this post in the form of
 a gist, but then I realized that maybe it was better to share it with the community. 
 
-## What is _sbt_?
-
 <img src="http://www.scala-sbt.org/assets/typesafe_sbt_svg.svg" height="100" width="100" align="middle">
 
 `sbt` (aka _Simple Build Tool_) is a general purpose build tool written in Scala for JVM developers. It took advantage of previous ideas developed by other similar tools like Maven, Gradle and Ant.
