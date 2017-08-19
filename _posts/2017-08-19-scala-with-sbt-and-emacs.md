@@ -68,6 +68,7 @@ where `:=` is a function defined in the `sbt` library. It is used to define a se
 
 > If the Scala version is not specified, the version sbt was built against is used. It is recommended to explicitly specify the version of Scala.  
 > Please note that because `compile` is a dependency of `run`, you don’t have to run `compile` before each `run`; just type `sbt run`.
+
 @see [sbt documentation](http://www.scala-sbt.org/0.13/docs/Howto-Scala.html)
 
 What's more, in the _interactive mode_ `sbt` has a list of useful commands that guide you in the day to day work like `help` and `tasks`. One of the most useful things of sbt is the automatic and continous execution of a task fired by the changes saved to a source file you're editing. To trigger this kind of behaviour a task must be prepended with `~`. So, to execute all the tests that either failed during the previous execution or whose transitive dependencies changed the task is `~testQuick`, to stop its execution just hit _Enter_.
