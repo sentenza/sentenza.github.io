@@ -3,6 +3,7 @@ layout: post
 title: "Work with Scala using sbt and Spacemacs"
 description: "How to be productive with Scala using lean tools"
 category: Programming
+tags: [Scala, emacs]
 ---
 {% include JB/setup %}
 
