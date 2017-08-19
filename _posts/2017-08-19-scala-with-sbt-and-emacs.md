@@ -30,7 +30,7 @@ In order to have a better understanding of the main tool you'll use programming 
 - [SBT: The missing tutorial](https://github.com/shekhargulati/52-technologies-in-2016/blob/master/02-sbt/README.md)
 - [The sbt reference manual](http://www.scala-sbt.org/0.13/docs/index.html)
 
-<!-- more -->
+<!--more-->
 
 ## Project scaffolding (doing it in the right way)
 
