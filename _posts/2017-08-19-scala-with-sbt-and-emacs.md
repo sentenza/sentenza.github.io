@@ -60,14 +60,28 @@ At first, you've to create the new project folder (e.g. `myproject`). Then, put 
 name := "myproject"
 version := "0.1.0"
 scalaVersion := "2.12.2"
+sbt.version=0.13.16
 ```
-
 where `:=` is a function defined in the `sbt` library. It is used to define a setting that overwrites any previous value without referring to other settings. In order to define the version of Scala that sbt will pick up it's possible to define a specific `scalaVersion`, but before doing so it's better to verify your environment configuration and the current version of your Scala compiler (`scala -version`). 
 
 > If the Scala version is not specified, the version sbt was built against is used. It is recommended to explicitly specify the version of Scala.  
 > Please note that because `compile` is a dependency of `run`, you don’t have to run `compile` before each `run`; just type `sbt run`.
 
 @see [sbt documentation](http://www.scala-sbt.org/0.13/docs/Howto-Scala.html)
+
+To retrieve the information about the sbt you're running on you can use the following command:
+
+```
+sbt about
+
+[warn] No sbt.version set in project/build.properties, base directory: /tmp
+[info] Set current project to tmp (in build file:/tmp/)
+[info] This is sbt 1.0.0
+[info] The current project is {file:/tmp/}tmp 0.1-SNAPSHOT
+[info] The current project is built against Scala 2.12.3
+[info] Available Plugins: sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.CorePlugin, sbt.plugins.JUnitXmlReportPlugin, sbt.plugins.Giter8TemplatePlugin
+[info] sbt, sbt plugins, and build definitions are using Scala 2.12.3
+```
 
 What's more, in the _interactive mode_ `sbt` has a list of useful commands that guide you in the day to day work like `help` and `tasks`. One of the most useful things of sbt is the automatic and continous execution of a task fired by the changes saved to a source file you're editing. To trigger this kind of behaviour a task must be prepended with `~`. So, to execute all the tests that either failed during the previous execution or whose transitive dependencies changed the task is `~testQuick`, to stop its execution just hit _Enter_.
 
