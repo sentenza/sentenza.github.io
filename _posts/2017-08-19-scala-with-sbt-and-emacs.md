@@ -100,6 +100,8 @@ libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.1" % "test"
 ```bash
 $ sbt new scala/hello-world.g8
 ```
+It's worth to point out that [the default `build.sbt` template file](https://github.com/scala/hello-world.g8/blob/master/src/main/g8/build.sbt) contained inside the _hello-world_ template is a very good source of information if you want to know how to configure your new Scala project in a matter of minutes.
+
 @see [Getting started with Scala and sbt in the CLI](https://www.scala-lang.org/documentation/getting-started-sbt-track/getting-started-with-scala-and-sbt-in-the-command-line.html)
 
 ## Resources
