@@ -60,7 +60,6 @@ At first, you've to create the new project folder (e.g. `myproject`). Then, put 
 name := "myproject"
 version := "0.1.0"
 scalaVersion := "2.12.2"
-sbt.version=0.13.16
 ```
 where `:=` is a function defined in the `sbt` library. It is used to define a setting that overwrites any previous value without referring to other settings. In order to define the version of Scala that sbt will pick up it's possible to define a specific `scalaVersion`, but before doing so it's better to verify your environment configuration and the current version of your Scala compiler (`scala -version`). 
 
@@ -69,7 +68,14 @@ where `:=` is a function defined in the `sbt` library. It is used to define a se
 
 @see [sbt documentation](http://www.scala-sbt.org/0.13/docs/Howto-Scala.html)
 
-`sbt.version` [specifies the target sbt version](http://www.scala-sbt.org/release/docs/Basic-Def.html#Specifying+the+sbt+version) that our build will use. If the required version is not available locally, the sbt launcher will download it for you. If this file is not present, the sbt launcher will choose an arbitrary version, **which is discouraged because it makes your build non-portable**.  To retrieve the essential information about sbt (also see [this SO answer](https://stackoverflow.com/a/8462854/1977778)) you're running on you can use the following command:
+`sbt.version` [specifies the target sbt version](http://www.scala-sbt.org/release/docs/Basic-Def.html#Specifying+the+sbt+version) that our build will use. If the required version is not available locally, the sbt launcher will download it for you. If this file is not present, the sbt launcher will choose an arbitrary version, **which is discouraged because it makes your build non-portable**.
+
+<kbd>/project/build.properties</kbd>
+```scala
+sbt.version = 0.13.16
+```
+
+To retrieve the essential information about sbt (also see [this SO answer](https://stackoverflow.com/a/8462854/1977778)) you're running on you can use the following command:
 
 ```
 sbt about
