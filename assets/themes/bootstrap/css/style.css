@@ -24,6 +24,16 @@
   text-align: left; }
 
 /* post-full*/
+.post-full,
+.blog-entries .panel-body {
+  font-family: Montserrat, Roboto, sans-serif;
+}
+
+.post-full .content,
+.blog-entries .panel-body {
+  font-size: 18px;
+}
+
 .post-full .date {
   margin-bottom: 20px;
   font-weight: bold; }
