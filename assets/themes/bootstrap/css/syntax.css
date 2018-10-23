@@ -11,7 +11,8 @@
 	color: #ffffff;
 	padding: 0 6px;
 	margin-bottom: 7px;
-	font: normal normal normal 115%/normal 'Menlo', 'Monaco', 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace !important;
+	margin-top: 3px;
+	font: normal normal normal 100%/normal 'Menlo', 'Monaco', 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace !important;
 	line-height: 1.1em;
 	overflow: auto;
 	font-size: 0.8em;

@@ -31,7 +31,7 @@
 
 .post-full .content,
 .blog-entries .panel-body {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .post-full .date {
@@ -76,4 +76,8 @@
 blockquote {
   font-size: 0.98em;
   font-style: italic;
+}
+
+.page-header {
+  margin: 42px 0 0;
 }
