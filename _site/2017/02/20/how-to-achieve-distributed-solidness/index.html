@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+  
+  <title>How to achieve distributed S.O.L.I.D.ness without being capped</title>
+  <meta name="description" content="Mixing pricinples and best practices to get better code">
+  
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/2017/02/20/how-to-achieve-distributed-solidness/">
+  
+  
+  <link rel="alternate" type="application/rss+xml" title="Alfredo Torre" href="http://localhost:4000/feed.xml">
+
+  
+
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:title" content="How to achieve distributed S.O.L.I.D.ness without being capped">
+  <meta name="twitter:description" content="Mixing pricinples and best practices to get better code">
+  
+  
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700" rel="stylesheet">
+
+  
+  <!-- Google Analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-3444253-11', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Alfredo Torre</a>
+
+    <nav class="site-nav">
+      
+        
+        <a class="page-link" href="/about/">About</a>
+      
+        
+        <a class="page-link" href="/curriculum-vitae/">Curriculm vitae</a>
+      
+        
+        <a class="page-link" href="/archives/">Archives</a>
+      
+        
+        <a class="page-link" href="https://github.com/sentenza">GitHub</a>
+      
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    
+      <h1 class="post-title" itemprop="name headline">How to achieve distributed S.O.L.I.D.ness without being capped</h1>
+    
+    <p class="post-meta"><time datetime="2017-02-20T00:00:00+00:00" itemprop="datePublished">Feb 20, 2017</time> •
+  
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <a href="/categories/software-engineering/">Software engineering</a>
+      
+    
+      
+    
+  
+
+
+ •
+  
+    
+    
+      
+        <a href="/tags/design/">Design</a>,
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+    
+    
+      
+    
+      
+        <a href="/tags/patterns/">Patterns</a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+
+</p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <h3 id="solid-principles">S.O.L.I.D. principles</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">SOLID Initial</th>
+      <th style="text-align: center">Stands for</th>
+      <th style="text-align: left">Concept</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">S</td>
+      <td style="text-align: center"><strong>S</strong>ingle responsibility principle</td>
+      <td style="text-align: left">A class should have only a single responsibility (i.e. only one potential change in the software’s specification should be able to affect the specification of the class)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">O</td>
+      <td style="text-align: center"><strong>O</strong>pen/closed principle</td>
+      <td style="text-align: left">“software entities … should be open for extension, but closed for modification.”</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">L</td>
+      <td style="text-align: center"><strong>L</strong>iskov substitution principle</td>
+      <td style="text-align: left">“objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program.”</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">I</td>
+      <td style="text-align: center"><strong>I</strong>nterface segregation principle</td>
+      <td style="text-align: left">“many client-specific interfaces are better than one general-purpose interface.”</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">D</td>
+      <td style="text-align: center"><strong>D</strong>ependency inversion principle</td>
+      <td style="text-align: left">one should “Depend upon Abstractions. Do not depend upon concretions.”</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="distributed-systems-withstand-cap-theorem">Distributed systems withstand CAP theorem</h3>
+
+<p>A <strong>distributed system</strong> essentially is a software system in which components located on interconnected systems communicate and coordinate their actions by passing messages.</p>
+
+<p>We generally make the following two assumptions: we have <strong>a system that stores data</strong> within an <strong>asynchronous network</strong>.
+Given that, we want to achieve three core features:</p>
+
+<ol>
+  <li><strong>C</strong>onsistency
+    <ul>
+      <li>a reed sees all previous completed writes.</li>
+    </ul>
+  </li>
+  <li><strong>A</strong>vailability
+    <ul>
+      <li>reads and writes always succeed.</li>
+    </ul>
+  </li>
+  <li><strong>P</strong>artition tolerance
+    <ul>
+      <li>Guaranteed properties are maintained even when network failures prevent some machines from communicating with others</li>
+    </ul>
+  </li>
+</ol>
+
+<p>The <strong>CAP theorem</strong> states that a system can satisfy at most two of these three features above.
+<!--more--></p>
+
+<p>For a distributed system to be continously <strong>available</strong>, every request received by a non-failing node in the system <strong>must</strong> result in a response, so every algorithm used by the service have to eventually terminate. Hence this fact would be observed in terms of uptime percentage and liveness property of the algorithm.</p>
+
+<p>Therefore, you have to apply the <em>art of choice</em> among two different paths:</p>
+
+<ul>
+  <li>Scalability over Consistency</li>
+  <li>Consistency over Scalability</li>
+</ul>
+
+<p>One could also need to have a transactional system based on a distributed one, and here it comes <strong>ACID</strong>ity:</p>
+
+<ul>
+  <li><strong>A</strong>tomicity</li>
+  <li><strong>C</strong>onsistency</li>
+  <li><strong>I</strong>solation</li>
+  <li><strong>D</strong>urability</li>
+</ul>
+
+<p>Keep always in mind that NoSQL is never ACID-compliant; it lacks of atomic operations across the documents and collections. On the contrary, SQL is normally ACID when using the right engine and a good relational scheme made of restrains and keys.</p>
+
+<h3 id="other-really-worth-to-know-patterns">Other really worth to know patterns</h3>
+
+<p><strong>State machine</strong>:  a set of defined states, where transition between states is initiated by triggering an action.</p>
+
+<p><strong>Workflow</strong>: a sequence of activities, where transition between them occurs when the previous activity is completed. Workflows can include branching to other activities. A workflow can be built on top of a state machine. A process manager is a workflow pattern.</p>
+
+<p><strong>Saga</strong>: multiple workflows, each providing compensating actions for every step of the workflow where it can fail. Sagas are not necessarily implemented using workflows.</p>
+
+<h2 id="resources">Resources</h2>
+
+<ul>
+  <li><a href="https://www.novoda.com/blog/designing-something-solid/">Designing something SOLID</a></li>
+</ul>
+
+  </div>
+
+  
+    <div class="post-comments" itemprop="comment">
+      <hr />
+<h1>Comments</h1>
+<p>Insert your custom comment provider like <a href="https://disqus.com">Disqus</a> or <a href="https://posativ.org/isso">Isso</a> here.</p>
+
+    </div>
+  
+
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <p>
+      
+
+&copy;  - Powered by <a href="https://jekyllrb.com">Jekyll</a> &amp; <a href="https://github.com/yous/whiteglass">whiteglass</a> - Subscribe via <a href="http://localhost:4000/feed.xml">RSS</a>
+
+    </p>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

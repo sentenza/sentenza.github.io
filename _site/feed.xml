@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-GB">
+  <generator uri="http://jekyllrb.com" version="3.8.4">Jekyll</generator>
+  
+  
+  <link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en-GB" />
+  <updated>2018-11-05T10:21:20+00:00</updated>
+  <id>http://localhost:4000//</id>
+
+  
+    <title type="html">Alfredo Torre</title>
+  
+
+  
+    <subtitle>The coding weblog of Alfredo Torre (aka sentenza)</subtitle>
+  
+
+  
+
+  
+  
+    <entry>
+      
+      <title type="html">Work with Scala using sbt and Spacemacs</title>
+      
+      
+      <link href="http://localhost:4000/2017/08/19/scala-with-sbt-and-emacs/" rel="alternate" type="text/html" title="Work with Scala using sbt and Spacemacs" />
+      
+      <published>2017-08-19T00:00:00+01:00</published>
+      <updated>2017-08-19T00:00:00+01:00</updated>
+      <id>http://localhost:4000/2017/08/19/scala-with-sbt-and-emacs</id>
+      <content type="html" xml:base="http://localhost:4000/2017/08/19/scala-with-sbt-and-emacs/">&lt;p&gt;Start programming and experimenting with a functional programming language like Scala might not seem simple at first sight. So,
+to get your feet wet it’s useful to have the very essential in a single place. I started writing this post in the form of
+a gist, but then I realized that maybe it was better to share it with the community.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.scala-sbt.org/assets/typesafe_sbt_svg.svg&quot; height=&quot;100&quot; width=&quot;100&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sbt&lt;/code&gt; (aka &lt;em&gt;Simple Build Tool&lt;/em&gt;) is a general purpose build tool written in Scala for JVM developers. It took advantage of previous ideas developed by other similar tools like Maven, Gradle and Ant.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Default project layouts&lt;/li&gt;
+  &lt;li&gt;Built-in tasks&lt;/li&gt;
+  &lt;li&gt;Plugin architecture&lt;/li&gt;
+  &lt;li&gt;Declarative Dependency management&lt;/li&gt;
+  &lt;li&gt;Code over Configuration: A DSL for build tool&lt;/li&gt;
+  &lt;li&gt;Interactive&lt;/li&gt;
+  &lt;li&gt;Scala REPL integration&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;In order to have a better understanding of the main tool you’ll use programming with Scala you must read:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/shekhargulati/52-technologies-in-2016/blob/master/02-sbt/README.md&quot;&gt;SBT: The missing tutorial&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.scala-sbt.org/0.13/docs/index.html&quot;&gt;The sbt reference manual&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;project-scaffolding-doing-it-in-the-right-way&quot;&gt;Project scaffolding (doing it in the right way)&lt;/h2&gt;
+
+&lt;p&gt;The best way to organize your codebase, using &lt;strong&gt;sbt&lt;/strong&gt;, is to follow &lt;a href=&quot;http://www.scala-sbt.org/0.13/docs/Directories.html&quot;&gt;the same folder structure used by Maven&lt;/a&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;src/
+  main/
+    resources/
+       &amp;lt;files to include in main jar here&amp;gt;
+    scala/
+       &amp;lt;main Scala sources&amp;gt;
+    java/
+       &amp;lt;main Java sources&amp;gt;
+  test/
+    resources
+       &amp;lt;files to include in test jar here&amp;gt;
+    scala/
+       &amp;lt;test Scala sources&amp;gt;
+    java/
+       &amp;lt;test Java sources&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;create-a-new-project-using-sbt&quot;&gt;Create a new project using sbt&lt;/h3&gt;
+
+&lt;p&gt;At first, you’ve to create the new project folder (e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;myproject&lt;/code&gt;). Then, put inside the new folder a file named &lt;code class=&quot;highlighter-rouge&quot;&gt;build.sbt&lt;/code&gt;, which contains the build settings that sbt will use. to house the build script (&lt;a href=&quot;http://www.scala-sbt.org/0.13/docs/Basic-Def.html#How+build.sbt+defines+settings&quot;&gt;how build.sbt defines settings&lt;/a&gt;). This file, at the very beginning, will look like the following:&lt;/p&gt;
+
+&lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;myproject&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;version&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;0.1.0&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;scalaVersion&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;2.12.2&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;where &lt;code class=&quot;highlighter-rouge&quot;&gt;:=&lt;/code&gt; is a function defined in the &lt;code class=&quot;highlighter-rouge&quot;&gt;sbt&lt;/code&gt; library. It is used to define a setting that overwrites any previous value without referring to other settings. In order to define the version of Scala that sbt will pick up it’s possible to define a specific &lt;code class=&quot;highlighter-rouge&quot;&gt;scalaVersion&lt;/code&gt;, but before doing so it’s better to verify your environment configuration and the current version of your Scala compiler (&lt;code class=&quot;highlighter-rouge&quot;&gt;scala -version&lt;/code&gt;).&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If the Scala version is not specified, the version sbt was built against is used. It is recommended to explicitly specify the version of Scala.&lt;br /&gt;
+Please note that because &lt;code class=&quot;highlighter-rouge&quot;&gt;compile&lt;/code&gt; is a dependency of &lt;code class=&quot;highlighter-rouge&quot;&gt;run&lt;/code&gt;, you don’t have to run &lt;code class=&quot;highlighter-rouge&quot;&gt;compile&lt;/code&gt; before each &lt;code class=&quot;highlighter-rouge&quot;&gt;run&lt;/code&gt;; just type &lt;code class=&quot;highlighter-rouge&quot;&gt;sbt run&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;@see &lt;a href=&quot;http://www.scala-sbt.org/0.13/docs/Howto-Scala.html&quot;&gt;sbt documentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sbt.version&lt;/code&gt; &lt;a href=&quot;http://www.scala-sbt.org/release/docs/Basic-Def.html#Specifying+the+sbt+version&quot;&gt;specifies the target sbt version&lt;/a&gt; that our build will use. If the required version is not available locally, the sbt launcher will download it for you. If this file is not present, the sbt launcher will choose an arbitrary version, &lt;strong&gt;which is discouraged because it makes your build non-portable&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;kbd&gt;/project/build.properties&lt;/kbd&gt;&lt;/p&gt;
+&lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;sbt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;version&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.13&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To retrieve the essential information about sbt (also see &lt;a href=&quot;https://stackoverflow.com/a/8462854/1977778&quot;&gt;this SO answer&lt;/a&gt;) you’re running on you can use the following command:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sbt about
+
+[warn] No sbt.version set in project/build.properties, base directory: /tmp
+[info] Set current project to tmp (in build file:/tmp/)
+[info] This is sbt 1.0.0
+[info] The current project is {file:/tmp/}tmp 0.1-SNAPSHOT
+[info] The current project is built against Scala 2.12.3
+[info] Available Plugins: sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.CorePlugin, sbt.plugins.JUnitXmlReportPlugin, sbt.plugins.Giter8TemplatePlugin
+[info] sbt, sbt plugins, and build definitions are using Scala 2.12.3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;What’s more, in the &lt;em&gt;interactive mode&lt;/em&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;sbt&lt;/code&gt; has a list of useful commands that guide you in the day to day work like &lt;code class=&quot;highlighter-rouge&quot;&gt;help&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;tasks&lt;/code&gt;. One of the most useful things of sbt is the automatic and continous execution of a task fired by the changes saved to a source file you’re editing. To trigger this kind of behaviour a task must be prepended with &lt;code class=&quot;highlighter-rouge&quot;&gt;~&lt;/code&gt;. So, to execute all the tests that either failed during the previous execution or whose transitive dependencies changed the task is &lt;code class=&quot;highlighter-rouge&quot;&gt;~testQuick&lt;/code&gt;, to stop its execution just hit &lt;em&gt;Enter&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;add-scalatest&quot;&gt;Add ScalaTest&lt;/h4&gt;
+&lt;p&gt;Starting from sbt 0.10 it’s possible to add the &lt;a href=&quot;http://doc.scalatest.org/3.0.1/#org.scalatest.tools.Framework&quot;&gt;ScalaTest framework&lt;/a&gt; to a sbt project adding the following line to the &lt;code class=&quot;highlighter-rouge&quot;&gt;build.sbt&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;libraryDependencies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;org.scalatest&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%%&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;scalatest&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;3.0.1&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;test&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.scalatest.org/user_guide/using_scalatest_with_sbt&quot;&gt;Using ScalaTest with sbt&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;start-simple-using-the-hello-world-template&quot;&gt;Start simple using the &lt;code class=&quot;highlighter-rouge&quot;&gt;hello-world&lt;/code&gt; template&lt;/h4&gt;
+&lt;p&gt;To start in the fastest way possible using &lt;code class=&quot;highlighter-rouge&quot;&gt;sbt&lt;/code&gt; there is a &lt;code class=&quot;highlighter-rouge&quot;&gt;hello-world&lt;/code&gt; template (the &lt;a href=&quot;https://www.scala-lang.org/documentation/getting-started-sbt-track/getting-started-with-scala-and-sbt-in-the-command-line.html&quot;&gt;full tutorial&lt;/a&gt;) that can be imported just using &lt;code class=&quot;highlighter-rouge&quot;&gt;sbt&lt;/code&gt; itself:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sbt new scala/hello-world.g8
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;It’s worth to point out that &lt;a href=&quot;https://github.com/scala/hello-world.g8/blob/master/src/main/g8/build.sbt&quot;&gt;the default &lt;code class=&quot;highlighter-rouge&quot;&gt;build.sbt&lt;/code&gt; template file&lt;/a&gt; contained inside the &lt;em&gt;hello-world&lt;/em&gt; template is a very good source of information if you want to know how to configure your new Scala project in a matter of minutes.&lt;/p&gt;
+
+&lt;p&gt;@see &lt;a href=&quot;https://www.scala-lang.org/documentation/getting-started-sbt-track/getting-started-with-scala-and-sbt-in-the-command-line.html&quot;&gt;Getting started with Scala and sbt in the CLI&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;/h2&gt;
+
+&lt;h3 id=&quot;ide-and-its-configuration&quot;&gt;IDE and its configuration&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.rabbitonweb.com/2016/01/31/my-emacs-for-scala-development-part-1/&quot;&gt;Emacs for Scala development&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Blang/scala&quot;&gt;Spacemacs and the Scala layer&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://spacemacs.org/layers/+lang/scala/README.html&quot;&gt;Spacemacs and ENSIME&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      
+
+      
+        <category term="scala" />
+      
+
+      
+        <category term="sbt" />
+      
+        <category term="emacs" />
+      
+
+      
+        <summary type="html">Start programming and experimenting with a functional programming language like Scala might not seem simple at first sight. So, to get your feet wet it’s useful to have the very essential in a single place. I started writing this post in the form of a gist, but then I realized that maybe it was better to share it with the community.</summary>
+      
+
+      
+      
+    </entry>
+  
+  
+  
+    <entry>
+      
+      <title type="html">How to achieve distributed S.O.L.I.D.ness without being capped</title>
+      
+      
+      <link href="http://localhost:4000/2017/02/20/how-to-achieve-distributed-solidness/" rel="alternate" type="text/html" title="How to achieve distributed S.O.L.I.D.ness without being capped" />
+      
+      <published>2017-02-20T00:00:00+00:00</published>
+      <updated>2017-02-20T00:00:00+00:00</updated>
+      <id>http://localhost:4000/2017/02/20/how-to-achieve-distributed-solidness</id>
+      <content type="html" xml:base="http://localhost:4000/2017/02/20/how-to-achieve-distributed-solidness/">&lt;h3 id=&quot;solid-principles&quot;&gt;S.O.L.I.D. principles&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;SOLID Initial&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Stands for&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Concept&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;S&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;S&lt;/strong&gt;ingle responsibility principle&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;A class should have only a single responsibility (i.e. only one potential change in the software’s specification should be able to affect the specification of the class)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;O&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;O&lt;/strong&gt;pen/closed principle&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;“software entities … should be open for extension, but closed for modification.”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;L&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;L&lt;/strong&gt;iskov substitution principle&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;“objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program.”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;I&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;I&lt;/strong&gt;nterface segregation principle&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;“many client-specific interfaces are better than one general-purpose interface.”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;D&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;D&lt;/strong&gt;ependency inversion principle&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;one should “Depend upon Abstractions. Do not depend upon concretions.”&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;distributed-systems-withstand-cap-theorem&quot;&gt;Distributed systems withstand CAP theorem&lt;/h3&gt;
+
+&lt;p&gt;A &lt;strong&gt;distributed system&lt;/strong&gt; essentially is a software system in which components located on interconnected systems communicate and coordinate their actions by passing messages.&lt;/p&gt;
+
+&lt;p&gt;We generally make the following two assumptions: we have &lt;strong&gt;a system that stores data&lt;/strong&gt; within an &lt;strong&gt;asynchronous network&lt;/strong&gt;.
+Given that, we want to achieve three core features:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;C&lt;/strong&gt;onsistency
+    &lt;ul&gt;
+      &lt;li&gt;a reed sees all previous completed writes.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;vailability
+    &lt;ul&gt;
+      &lt;li&gt;reads and writes always succeed.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;P&lt;/strong&gt;artition tolerance
+    &lt;ul&gt;
+      &lt;li&gt;Guaranteed properties are maintained even when network failures prevent some machines from communicating with others&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The &lt;strong&gt;CAP theorem&lt;/strong&gt; states that a system can satisfy at most two of these three features above.
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;For a distributed system to be continously &lt;strong&gt;available&lt;/strong&gt;, every request received by a non-failing node in the system &lt;strong&gt;must&lt;/strong&gt; result in a response, so every algorithm used by the service have to eventually terminate. Hence this fact would be observed in terms of uptime percentage and liveness property of the algorithm.&lt;/p&gt;
+
+&lt;p&gt;Therefore, you have to apply the &lt;em&gt;art of choice&lt;/em&gt; among two different paths:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Scalability over Consistency&lt;/li&gt;
+  &lt;li&gt;Consistency over Scalability&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;One could also need to have a transactional system based on a distributed one, and here it comes &lt;strong&gt;ACID&lt;/strong&gt;ity:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;tomicity&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;C&lt;/strong&gt;onsistency&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;I&lt;/strong&gt;solation&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;D&lt;/strong&gt;urability&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Keep always in mind that NoSQL is never ACID-compliant; it lacks of atomic operations across the documents and collections. On the contrary, SQL is normally ACID when using the right engine and a good relational scheme made of restrains and keys.&lt;/p&gt;
+
+&lt;h3 id=&quot;other-really-worth-to-know-patterns&quot;&gt;Other really worth to know patterns&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;State machine&lt;/strong&gt;:  a set of defined states, where transition between states is initiated by triggering an action.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Workflow&lt;/strong&gt;: a sequence of activities, where transition between them occurs when the previous activity is completed. Workflows can include branching to other activities. A workflow can be built on top of a state machine. A process manager is a workflow pattern.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Saga&lt;/strong&gt;: multiple workflows, each providing compensating actions for every step of the workflow where it can fail. Sagas are not necessarily implemented using workflows.&lt;/p&gt;
+
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.novoda.com/blog/designing-something-solid/&quot;&gt;Designing something SOLID&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      
+
+      
+        <category term="Software engineering" />
+      
+
+      
+        <category term="Design" />
+      
+        <category term="Patterns" />
+      
+
+      
+        <summary type="html">S.O.L.I.D. principles</summary>
+      
+
+      
+      
+    </entry>
+  
+  
+</feed>
