@@ -77,6 +77,14 @@ figcaption {
  * Lists
  */
 
+ ul {
+   list-style: square;
+ }
+
+ ol {
+   list-style: lower-greek;
+ }
+
 ul, ol {
   margin-left: 30px;
 }

@@ -1,3 +1,21 @@
 _site
 .sass-cache
 .jekyll-metadata
+
+# Temporary
+.netrwhist
+*~
+
+# Vim specific ---
+# Swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
+._*
+*.swp
+*.swo
+
+# System Files
+.DS_Store
+Thumbs.db
