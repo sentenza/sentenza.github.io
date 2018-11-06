@@ -14,10 +14,11 @@ lang: en-GB
 twitter_username: 
 github_username:  sentenza
 google_analytics: UA-3444253-11
+remote_theme: yous/whiteglass
 
 # Build settings
 markdown: kramdown
-theme: jekyll-whiteglass
+# theme: jekyll-whiteglass
 plugins:
   - jekyll-archives
   - jekyll-paginate
