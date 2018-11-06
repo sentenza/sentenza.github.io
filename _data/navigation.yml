@@ -7,5 +7,5 @@ main:
     url:  /curriculum-vitae/
   - title: "Archives"
     url: /archives/
-  - title: "GitHub"
+  - title: "<i class='fab fa-github'></i>"
     url: https://github.com/sentenza
