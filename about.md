@@ -2,6 +2,7 @@
 layout: page
 title: "About"
 permalink: /about/
+comments: false
 ---
 
 This is the coding weblog of Alfredo Torre (aka [@sentenza][sentenza-github]).

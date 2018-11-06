@@ -2,46 +2,58 @@
 layout: page
 title: "Curriculum vitae"
 permalink: /curriculum-vitae/
+comments: false
 ---
 
-## About Me
+### About Me
 
-<img class="profile-picture" src="sherlock.jpg">
+<div class="profile-picture-container">
+    <img class="profile-picture" src="/assets/img/alfredo_torre.jpg">
+</div>
 
-Hi! I am a junior year student of B.E. Computer Science at Birla Institute of Technology and Science, Pilani.
+I'm a software engineer constantly keen on improving my skills and open-minded about cutting edge technologies.
 
-This is a jekyll based resume template. You can find the full source code on [GitHub](https://github.com/bk2dcradle/researcher)
+I have a strong background as software developer and broader engineering knowledge provided by my studies, making me technically flexible and capable to focus on any given task. 
+I'm highly motivated to develop a better awareness of software methodologies and best practices in commercial environments with large teams.<br>
+Not only am I happy working in a team, but also I feel comfortable in working remotely. For details about my skills please refer to my working experiences and to my <i class="fab fa-linkedin"></i> [ profile page](https://uk.linkedin.com/in/alfredotorre/en).
 
-## Research Interest
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus ipsum ac erat aliquam dapibus. Vestibulum vehicula placerat ex, a consectetur odio pharetra quis. Mauris id urna ante. Fusce pharetra diam ac nisi aliquet, vel egestas ex iaculis. Pellentesque laoreet cursus tellus sed pellentesque. Praesent a rhoncus elit. Nunc ipsum nisl, consequat sit amet pretium quis, gravida id ipsum.
-
-## Publications
-
-1. F.Bar, J.Doe: Effects of having a placeholder of a name
-2. S.Holmes, J.Watson: Consequences of living with a sociopath in London
-
-## Typography
-
-This is a [link](http://google.com). Something *italics* and something **bold**.
-
-Here is a table
-
-Year | Award | Category
------|-------|--------
-2014 | Emmy  | Won Outstanding Lead Actor in a miniseries or a movie
-2015 | BAFTA | Nominated for Best Leading Actor for Sherlock
-2014 | Satellite | Won Best Actor miniseries or television film
-
-Here is a horizontal rule
+In my spare time I love reading Sci-Fi books or developing new projects that almost always involves principles of functional programming.
 
 ---
 
-Here is a blockquote
+### Experience
 
-> To a great mind, nothing is little
+- Senior software engineer, [Further][further] - London (UK), Mar 2017 → Current
+- Lead software engineer, [FCS System][fcs] - Treviso (IT), 2014 → Jan 2017 
+- General system administrator, <abbr title="Consortium for the promotion and adoption of advanced computing technologies">COMETA</abbr>, Catania (IT), Mar 2014 → Sep 2014
+- Information Technology and Services Consultant, [DIEEI][DIEEI], Catania (IT), Jun 2014 → Aug 2014
+- Mobile app backend developer, A2PLAB, Dec 2013 → Feb 2014
 
-## References
+---
 
-* Foo Bar: Head of Department, Placeholder Names, Lorem
-* John Doe: Associate Professor, Department of Computer Science, Ipsum
+### Education
+
+- Master of Science in Computer Engineering, University of Catania (IT), Nov 2011 → Nov 2013
+- Scholarship holder, University of Catania (IT), Jan 2013 → Jun 2013
+
+### Certifications
+
+1. **Angular 7 (formerly Angular 2) - The Complete Guide**. Certification date: May 2018. License `UC-9SPINQOW`. [See certificate][angular-certificate].
+2. **Functional Programming Principles in Scala** by École Polytechnique Fédérale de Lausanne on Coursera. License `ALDULU43AC`. [Certificate][scala-certificate] earned on 29th June 2014.
+
+### Publications
+
+1. Giordano D., Torre A., Samperi C., Alessi S. and Faro A. (2013). [**An Ontology based Approach to Integrate Data and Maps - In the Government Enterprise Architecture: A Case Study**][pub1]. In *Proceedings of the 15th International Conference on Enterprise Information Systems - Volume 3: ICEIS*, ISBN 978-989-8565-61-7, pages 356-362. DOI: 10.5220/0004558403560362.
+2. Giordano D., Torre A., Alessi S., Costanzo A. and Faro A. (2013). [**Integrating Distributed Data Bases in a Semantic Framework - The K-Metropolis Project**][pub2]. In *Proceedings of the 15th International Conference on Enterprise Information Systems - Volume 1: ICEIS*, ISBN 978-989-8565-59-4, pages 322-328. DOI: 10.5220/0004558203220328.
+3. Giordano D., Torre A., Samperi C., Alessi S. and Faro A. (2013). [**Joining Data and Maps in the Government Enterprise Architecture by a Semantic Approach: Methodology, Ontology and Case Study**][pub3]. In: *Hammoudi S., Cordeiro J., Maciaszek L., Filipe J. (eds) Enterprise Information Systems. ICEIS 2013*. Lecture Notes in Business Information Processing, vol 190. Springer, Cham.
+
+
+
+[pub1]: http://www.scitepress.org/DigitalLibrary/PublicationsDetail.aspx?ID=CccYZBTmc8E%3d
+[pub2]: http://www.scitepress.org/PublicationsDetail.aspx?ID=miXBzCLi2To=&t=1
+[pub3]: https://link.springer.com/chapter/10.1007/978-3-319-09492-2_30#citeas
+[angular-certificate]: https://www.udemy.com/certificate/UC-9SPINQOW/
+[scala-certificate]: https://www.coursera.org/account/accomplishments/verify/ALDULU43AC
+[DIEEI]: http://www.dieei.unict.it/en
+[further]: https://www.go-further.co
+[fcs]: https://www.fcssystem.com
