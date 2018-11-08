@@ -33,7 +33,7 @@ In my spare time I love reading Sci-Fi books or developing new projects that alm
 
 ### Education
 
-- Master of Science in Computer Engineering, University of Catania (IT), Nov 2011 → Nov 2013
+- Master of Science in Computer Engineering, University of Catania (IT) &mdash; [<i class="fas fa-file-alt"></i>][thesis-ppt], Nov 2011 → Nov 2013
 - Scholarship holder, University of Catania (IT), Jan 2013 → Jun 2013
 
 ### Certifications
@@ -63,3 +63,4 @@ In my spare time I love reading Sci-Fi books or developing new projects that alm
 [DIEEI]: http://www.dieei.unict.it/en
 [further]: https://www.go-further.co
 [fcs]: https://www.fcssystem.com
+[thesis-ppt]: https://www.slideshare.net/alfredotorre1/presentation-28760482
