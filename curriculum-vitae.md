@@ -47,7 +47,13 @@ In my spare time I love reading Sci-Fi books or developing new projects that alm
 2. Giordano D., Torre A., Alessi S., Costanzo A. and Faro A. (2013). [**Integrating Distributed Data Bases in a Semantic Framework - The K-Metropolis Project**][pub2]. In *Proceedings of the 15th International Conference on Enterprise Information Systems - Volume 1: ICEIS*, ISBN 978-989-8565-59-4, pages 322-328. DOI: 10.5220/0004558203220328.
 3. Giordano D., Torre A., Samperi C., Alessi S. and Faro A. (2013). [**Joining Data and Maps in the Government Enterprise Architecture by a Semantic Approach: Methodology, Ontology and Case Study**][pub3]. In: *Hammoudi S., Cordeiro J., Maciaszek L., Filipe J. (eds) Enterprise Information Systems. ICEIS 2013*. Lecture Notes in Business Information Processing, vol 190. Springer, Cham.
 
+#### An inspiring quote
 
+> *"[...] E quanto importi nella vita, non già di esser forti, ma di sentirsi forti, di essersi misurati almeno una volta, di essersi trovati almeno una volta nella condizione umana più antica, soli davanti alla pietra cieca e sorda, senza altri aiuti che le proprie mani e la propria testa…"* (IT)
+
+>  *"[...] I also know how important it is in life not necessarily to be strong but to feel strong. To measure yourself at least once. To find yourself at least once in the most ancient of human conditions. Facing the blind deaf stone alone, with nothing to help you but your hands and your own head…"* (EN)
+
+&ndash; Primo Levi, _Il sistema periodico_, Torino, Einaudi 2005. "Ferro".
 
 [pub1]: http://www.scitepress.org/DigitalLibrary/PublicationsDetail.aspx?ID=CccYZBTmc8E%3d
 [pub2]: http://www.scitepress.org/PublicationsDetail.aspx?ID=miXBzCLi2To=&t=1
