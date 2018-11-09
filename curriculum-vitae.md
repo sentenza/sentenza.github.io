@@ -40,6 +40,7 @@ In my spare time I love reading Sci-Fi books or developing new projects that alm
 
 1. **Angular 7 (formerly Angular 2) - The Complete Guide**. Certification date: May 2018. License `UC-9SPINQOW`. [See certificate][angular-certificate].
 2. **Functional Programming Principles in Scala** by École Polytechnique Fédérale de Lausanne on Coursera. License `ALDULU43AC`. [Certificate][scala-certificate] earned on 29th June 2014.
+3. **Computer Forensics** by Universit&agrave; di Catania, earned on September 2012. [Course syllabus (ITA)][computer-forensics]
 
 ### Publications
 
@@ -60,6 +61,7 @@ In my spare time I love reading Sci-Fi books or developing new projects that alm
 [pub3]: https://link.springer.com/chapter/10.1007/978-3-319-09492-2_30#citeas
 [angular-certificate]: https://www.udemy.com/certificate/UC-9SPINQOW/
 [scala-certificate]: https://www.coursera.org/account/accomplishments/verify/ALDULU43AC
+[computer-forensics]: http://www.dmi.unict.it/~battiato/CF1112/CF1112.html
 [DIEEI]: http://www.dieei.unict.it/en
 [further]: https://www.go-further.co
 [fcs]: https://www.fcssystem.com
