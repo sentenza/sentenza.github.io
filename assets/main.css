@@ -445,6 +445,7 @@ code.highlighter-rouge {
 
 .highlighter-rouge .highlight {
   background-color: #23241f;
+  color: #f8f8f2;
 }
 
 /* Monokai theme https://github.com/jwarby/jekyll-pygments-themes */
