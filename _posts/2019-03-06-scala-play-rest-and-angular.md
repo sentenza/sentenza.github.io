@@ -221,7 +221,7 @@ val Success = 0
 val Error = 1
 
 // Run angular serve task when Play runs in dev mode, that is, when using 'sbt run'
-// https://www.playframework.com/documentation/2.7.x/SBTCookbook
+// https://www.playframework.com/documentation/2.7.0/SBTCookbook
 PlayKeys.playRunHooks += baseDirectory.map(FrontendRunHook.apply).value
 
 // True if build running operating system is windows.
@@ -281,7 +281,7 @@ test := ((test in Test) dependsOn `ui-test`).value
 To start, create a new file in the `app/controllers` folder called `FrontendController.scala`:
 
 ```bash
-touch app/controllers/ApiController.scala
+touch app/controllers/FrontendController.scala
 ```
 
 Next, populate `FrontendController.scala` with the following:
