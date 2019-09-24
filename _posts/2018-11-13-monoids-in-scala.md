@@ -76,7 +76,7 @@ val optionMonoid[U]: Monoid[Option[U]] = new Monoid[U] {
 Look for a moment at the last one, the Option Monoid. What happens if we pass two `Some` to the `op`? Only the first option
 will be evaluated, so we might argue that this implementation is not the same as writing `def op(op2: Option[T], op1: Option[T])`. The truth is that we can compose the arguments of `op` in the opposite order; the monoid laws will remain intact but we will end up with a doppelgänger. 
 
-![dopperganger](https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fi735.photobucket.com%2Falbums%2Fww358%2FBlackOut0189%2FTwin%2520Peaks%2Fvlcsnap-00004.jpg&f=1)
+<div class="tenor-gif-embed" data-postid="9319750" data-share-method="host" data-width="100%" data-aspect-ratio="1.8800000000000001"><a href="https://tenor.com/view/doppelganger-twin-peaks-gif-9319750">Doppelganger Midget GIF</a> from <a href="https://tenor.com/search/doppelganger-gifs">Doppelganger GIFs</a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 
 Every monoid has a **_dual_** where the `op` combines things in the opposite order. Monoids like
  `floatAddition` are equivalent to their duals because their `op` is commutative as well as associative.
