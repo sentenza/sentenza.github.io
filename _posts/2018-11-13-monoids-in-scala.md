@@ -39,6 +39,9 @@ Above all, monoids are useful in two important ways:
 - they make it easy doing parallel computations, because we'll be able to split our problem in smaller pieces
 - they can **be composed** to form complex computations out of simple pieces.
 
+### Monoids, Monoids, Monoids
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DJyhWAwmGqE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ### OK, fine. Give me some code
 
 To use the `Monoid[T]` trait we need some instances, so let's define them and you'll see in a minute how easy actually is to factor the common algebraic behaviours of common types.
