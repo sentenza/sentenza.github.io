@@ -40,7 +40,7 @@ Above all, monoids are useful in two important ways:
 - they can **be composed** to form complex computations out of simple pieces.
 
 ### Monoids, Monoids, Monoids
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DJyhWAwmGqE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="740" height="416" src="https://www.youtube.com/embed/DJyhWAwmGqE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### OK, fine. Give me some code
 
