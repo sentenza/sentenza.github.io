@@ -6,7 +6,6 @@ category: scala
 tags: [Play, Angular]
 ---
 
-<img alt="REST with Play and Angular" src="/assets/img/desk.jpg">
 In this post we'll go through all the essential steps that will eventually lead you to the construction of a new self-contained web application based on a RESTful API built with 
 the [Scala Play framework](https://www.playframework.com/documentation/2.7.x/Introduction) and consumed by an [Angular 7](https://angular.io) front end. 
 We will build the API from scratch putting the front end code in the same repository (within the `/ui` folder).
