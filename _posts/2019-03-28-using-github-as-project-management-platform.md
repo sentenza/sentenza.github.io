@@ -6,8 +6,7 @@ category: Software engineering
 tags: [Agile, Scrum]
 ---
 
-<img alt="Scrum diagram" src="/assets/img/scrum_diagram.png">
-Recently, the dev-team in which I'm working in decided to abandon Jira in favor of GitHub as the sole platform for the project management.
+Recently, the dev-team to which I belong decided to abandon Jira in favor of GitHub as the sole platform for the project management.
 You can argue that Jira and GitHub are not really comparable, and I'd agree with you if not because - let's be honest to each other - the former is also very very slow and clunky. As a matter of fact you will eventually find yourself dealing with unannounced UI/UX updates and a constant feeling of slowness followed by a sense of frustrastion, which is like a trademark when using a _mastodon_. What is more, you have to pay to use it and you need another set of credentials to remember/store. 
 
 Okay, enough talking I guess, let's see how to use your GitHub projects, milestones and issues to create a lean Agile workflow. All it takes is a bit of strictness and a self imposed protocol to follow. 
