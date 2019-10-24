@@ -11,6 +11,8 @@ main:
     url: /docs/
   - title: "<i class='fab fa-github'></i>"
     url: https://github.com/sentenza
+  - title: "<i class='fab fa-gitlab'></i>"
+    url: https://gitlab.com/alfredotorre  
   - title: "<i class='fab fa-stack-overflow'></i>"
     url: https://stackoverflow.com/users/1977778/sentenza
   - title: "<i class='fab fa-linkedin'></i>"
