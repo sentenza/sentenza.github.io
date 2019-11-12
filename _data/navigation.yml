@@ -3,8 +3,8 @@
 main:
   - title: "About"
     url: /about/
-  - title: "CV"
-    url:  /curriculum-vitae/
+  # - title: "CV"
+  #   url:  /curriculum-vitae/
   - title: "Archives"
     url: /archives/
   - title: "Notes"
