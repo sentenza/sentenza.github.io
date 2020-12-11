@@ -12,7 +12,7 @@ body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure {
  */
 
 body {
-  font: 400 14px/1.5 'Montserrat', sans-serif;
+  font: 400 16px/1.7 'Montserrat', sans-serif;
   color: #111;
   background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%;
@@ -441,7 +441,8 @@ pre>code {
 
 code.highlighter-rouge {
   background-color: whitesmoke;
-  color: #C7254E;
+  /* color: #C7254E; */
+  color: #f92672;
 }
 
 .highlighter-rouge .highlight {
