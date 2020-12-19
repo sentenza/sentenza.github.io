@@ -297,6 +297,16 @@ hr {
   color: #2568ba;
 }
 
+.post-content h2, 
+.post-content h3, 
+.post-content h4, 
+.post-content h5, 
+.post-content h6
+{
+  margin-top: 2em;
+  margin-bottom: 20px;
+}
+
 .post-continue a {
   padding: 8px 15px;
   text-decoration: none;
