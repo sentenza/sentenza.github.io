@@ -42,9 +42,12 @@ In my spare time I love reading Sci-Fi books or developing new projects that alm
 
 ### Certifications
 
-1. **Angular 7 (formerly Angular 2) - The Complete Guide**. Certification date: May 2018. License `UC-9SPINQOW`. [See certificate][angular-certificate].
-2. **Functional Programming Principles in Scala** by École Polytechnique Fédérale de Lausanne on Coursera. License `ALDULU43AC`. [Certificate][scala-certificate] earned on 29th June 2014.
-3. **Computer Forensics** by Universit&agrave; di Catania, earned on September 2012. [Course syllabus][computer-forensics]. (ITA)
+1. **GCP: Securing and Integrating Components of your Application**. Certification date: September 2019. [See certificate][gcp-integration-certificate].
+2. **GCP Developer Enablement Program**. Certification date: June 2019. [See certificate][gcp-emblement-certificate].
+3. **Google Cloud Platform Fundamentals: Core Infrastructure**. Certification date: May 2018. [See certificate][gcp-fundamentals-certificate].
+4. **Angular 7 (formerly Angular 2) - The Complete Guide**. Certification date: October 2018. License `UC-9SPINQOW`. [See certificate][angular-certificate].
+5. **Functional Programming Principles in Scala** by École Polytechnique Fédérale de Lausanne on Coursera. License `ALDULU43AC`. [Certificate][scala-certificate] earned on 29th June 2014.
+6. **Computer Forensics** by Universit&agrave; di Catania, earned on September 2012. [Course syllabus][computer-forensics]. (ITA)
 
 ### Publications
 
@@ -77,6 +80,9 @@ In my spare time I love reading Sci-Fi books or developing new projects that alm
 [pub3]: https://link.springer.com/chapter/10.1007/978-3-319-09492-2_30#citeas
 [angular-certificate]: https://www.udemy.com/certificate/UC-9SPINQOW/
 [scala-certificate]: https://www.coursera.org/account/accomplishments/verify/ALDULU43AC
+[gcp-fundamentals-certificate]: https://www.coursera.org/account/accomplishments/certificate/24XRUYHYQFPT
+[gcp-emblement-certificate]: https://badges.codemotion.com/ffe24fc1e4c1e00754bb1c778ccf7c0c5846e2ff/learning/f6e1126cedebf23e1463aee73f9df08783640400.html
+[gcp-integration-certificate]: https://www.coursera.org/account/accomplishments/verify/RZ4F46CGD885
 [computer-forensics]: http://www.dmi.unict.it/~battiato/CF1112/CF1112.html
 [DIEEI]: http://www.dieei.unict.it/en
 [further]: https://www.go-further.co
