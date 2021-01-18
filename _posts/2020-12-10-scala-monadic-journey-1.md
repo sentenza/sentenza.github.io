@@ -167,7 +167,7 @@ Even though this is not 100% true we could say that **any Scala class that imple
 >
 > `flatMap` is a basic requirement, and you can **optionally** provide `map`, `withFilter` and `foreach`.
 >
-> However, there's no such thing as strict conformance to a `Monad` typeclass, like in Haskell.
+> However, there's no such thing as strict conformance to a `Monad` type class, like in Haskell.
 >
 > -- [Gabriele Petronella - What exactly makes Option a monad in Scala?](https://stackoverflow.com/a/25361305/1977778)
 
