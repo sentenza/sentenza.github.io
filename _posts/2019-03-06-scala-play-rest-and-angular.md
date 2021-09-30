@@ -10,7 +10,7 @@ In this post we'll go through all the essential steps that will eventually lead 
 the [Scala Play framework](https://www.playframework.com/documentation/2.7.x/Introduction) and consumed by an [Angular 7](https://angular.io) front end. 
 We will build the API from scratch putting the front end code in the same repository (within the `/ui` folder).
 
-A complete example can be also found at https://gitlab.com/alfredotorre/ngscalaplay
+A complete example can be also found at [gitlab.com/alfredotorre/ngscalaplay](https://gitlab.com/alfredotorre/ngscalaplay)
 
 ---
 
@@ -411,7 +411,7 @@ To give it a test run, open another terminal window and use the curl command to 
 `curl localhost:9000/api/ping`
 
 
-The full project can be found at https://gitlab.com/alfredotorre/ngscalaplay
+The full project can be found at [gitlab.com/alfredotorre/ngscalaplay](https://gitlab.com/alfredotorre/ngscalaplay)
 
 
 ### Resources
