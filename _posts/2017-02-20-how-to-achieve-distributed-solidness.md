@@ -29,7 +29,7 @@ We generally make the following two assumptions: we have **a system that stores 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/2479647/135652337-f87fde57-1d42-4241-8783-9d66d5ef9c97.png">
   <br/>
-  <i><a href=http://robertgreiner.com/2014/08/cap-theorem-revisited>Source: CAP theorem revisited</a></i>
+  <i>[Source: CAP theorem revisited](http://robertgreiner.com/2014/08/cap-theorem-revisited)</i>
 </p>
 
 The **CAP theorem** states that a system can satisfy at most two of these three features above.
