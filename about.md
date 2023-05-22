@@ -9,13 +9,22 @@ comments: false
     <img class="profile-picture" src="/assets/img/alfredo_torre.jpg">
 </div>
 
-I'm a software engineer constantly keen on improving my skills and open-minded about cutting edge technologies.
+I'm a passionate software engineer constantly seeking opportunities to enhance my skills and explore cutting-edge technologies. With a solid background as a software developer and a comprehensive engineering education, I possess the technical flexibility and adaptability to excel in any project.
 
-I have a strong background as software developer and broader engineering knowledge provided by my studies, making me technically flexible and capable to focus on any given task. 
-I'm highly motivated to develop a better awareness of software methodologies and best practices in commercial environments with large teams.<br>
-Not only am I happy working in a team, but also I feel comfortable in working remotely. For details about my skills please refer to my working experiences and to my <i class="fab fa-linkedin"></i> [ profile page](https://uk.linkedin.com/in/alfredotorre/en).
+Driven by an insatiable curiosity, I am always eager to delve deeper into the world of software methodologies and stay up-to-date with the latest industry trends. By continuously expanding my knowledge and honing my craft,
+I ensure that I am well-equipped to deliver optimal solutions and drive innovation within large, collaborative teams.
 
-In my spare time I love reading Sci-Fi books or developing new projects that almost always involves principles of functional programming.
+I thrive in both team environments and **remote work settings**, seamlessly adapting to diverse work dynamics and fostering effective communication across geographically distributed teams. My ability to collaborate harmoniously with colleagues from different backgrounds allows me to contribute to a positive and productive work culture.
+
+Having established myself as a **Senior Scala Developer**, I am now seeking opportunities that will not only allow me to leverage my existing expertise but also provide a platform for me to acquire proficiency in **Rust programming**. 
+I am enthusiastic about exploring the unique features and capabilities of Rust and applying them to solve complex problems.
+
+By combining my Scala proficiency with a growing fluency in Rust, I aim to contribute to projects that span both languages, leveraging the strengths of each to create efficient, scalable, and robust solutions.
+
+To learn more about my skills, please refer to my extensive work experience and visit my [<i class="fab fa-linkedin"></i> profile page](https://uk.linkedin.com/in/alfredotorre/en).
+
+Beyond the realm of software engineering, I am an avid _Sci-Fi_ enthusiast. Immersing myself in captivating _Sci-Fi_ literature not only fuels my imagination but also inspires me to think outside the box and envision innovative solutions. 
+In my spare time, I enthusiastically engage in developing personal projects that frequently incorporate the principles of **Functional Programming**. This allows me to experiment with new ideas, refine my technical skills, and continually push the boundaries of what is possible.
 
 >  *"[...] I also know how important it is in life not necessarily to be strong but to feel strong. To measure yourself at least once. To find yourself at least once in the most ancient of human conditions. Facing the blind deaf stone alone, with nothing to help you but your hands and your own head…"* 
 (<abbr title="[...] E quanto importi nella vita, non già di esser forti, ma di sentirsi forti, di essersi misurati almeno una volta, di essersi trovati almeno una volta nella condizione umana più antica, soli davanti alla pietra cieca e sorda, senza altri aiuti che le proprie mani e la propria testa…"><i class="fab fa-readme"></i> ITA</abbr>)
