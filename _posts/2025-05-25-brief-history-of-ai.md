@@ -42,6 +42,8 @@ The field remained relatively dormant until the 1980s, when the backpropagation 
 
 During my own work with Semantic Web technologies in the early 2010s, I was essentially witnessing symbolic AI principles finding new expression at web scale. Tim Berners-Lee's vision of the Semantic Web was fundamentally rooted in the same knowledge representation traditions that had driven symbolic AI since the 1950s.
 
+<iframe width="740" height="416" src="https://www.youtube.com/embed/OM6XIICm_qo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 The [Resource Description Framework (RDF)](https://en.wikipedia.org/wiki/Resource_Description_Framework) with its subject-predicate-object triple format was essentially a web-scale implementation of the semantic networks that researchers like Ross Quillian had developed in the 1960s. When you create an RDF statement like `<Company:Apple> <hasFounder> <Person:SteveJobs>`, you're using the same kind of symbolic assertion that early AI systems employed for knowledge representation.
 
 [Web Ontology Language (OWL)](https://en.wikipedia.org/wiki/Web_Ontology_Language) made this connection even more explicit. Built on description logics — an evolution of the frame-based systems that Minsky and others had developed - OWL provided sophisticated mechanisms for defining class hierarchies, property restrictions, and logical relationships. OWL reasoners like Pelican and HermiT were essentially expert system inference engines applied to web-scale data.
@@ -59,6 +61,8 @@ Then came the breakthrough that changed everything.
 ### 2012: The AlexNet Moment
 
 **September 2012** marked a pivotal moment in AI history when Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton published ["ImageNet Classification with Deep Convolutional Neural Networks."](https://dl.acm.org/doi/pdf/10.1145/3065386) Their AlexNet architecture achieved a 15.3% top-5 error rate on the ImageNet dataset, dramatically outperforming the previous best result of 26.2%.
+
+<iframe width="740" height="416" src="https://www.youtube.com/embed/UZDiGooFs54" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 This wasn't just an incremental improvement—it was a paradigm shift that couldn't be ignored. AlexNet demonstrated several crucial innovations:
 
@@ -132,6 +136,8 @@ The Semantic Web's standards (RDF, OWL, SPARQL) and knowledge graphs now serve a
 ---
 
 ## The Modern Machine Learning Renaissance: Key Milestones (2011-2024)
+
+<iframe width="740" height="416" src="https://www.youtube.com/embed/R3YFxF0n8n8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## The Pre-Explosion Era (2010-2012)
 
