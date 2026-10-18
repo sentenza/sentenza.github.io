@@ -1,24 +1,17 @@
----
-layout: default
----
-
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
-
-<div class="container">
-  <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Moved to https://alfredotorre.gitlab.io</title>
+<meta name="robots" content="noindex">
+<script>
+  var m = location.pathname.match(/^\/\d{4}\/\d{2}\/\d{2}\/([^/]+)\/?$/);
+  var t = location.pathname.match(/^\/tags\/([^/]+)\/?$/);
+  location.replace("https://alfredotorre.gitlab.io" + (m ? "/posts/" + m[1] + "/" : t ? "/tags/" : "/"));
+</script>
+<meta http-equiv="refresh" content="1; url=https://alfredotorre.gitlab.io/">
+</head>
+<body>
+<p>This site has moved to <a href="https://alfredotorre.gitlab.io/">https://alfredotorre.gitlab.io</a>.</p>
+</body>
+</html>
